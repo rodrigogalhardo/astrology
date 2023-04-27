@@ -89,6 +89,7 @@ class MakeSvgInstance:
             self.user.houses_degree_ut[9],
             self.user.houses_degree_ut[6],
             self.user.houses_degree_ut[3],
+            self.user.houses_degree_ut[4],
         ]
 
         # Make a list of the relative degrees of the points in the graphic.
@@ -101,6 +102,7 @@ class MakeSvgInstance:
             self.user.houses_list[9]["position"],
             self.user.houses_list[6]["position"],
             self.user.houses_list[3]["position"],
+            self.user.houses_list[4]["position"],
         ]
 
         # Make list of the points sign
@@ -114,6 +116,7 @@ class MakeSvgInstance:
             self.user.houses_list[9]["sign_num"],
             self.user.houses_list[6]["sign_num"],
             self.user.houses_list[3]["sign_num"],
+            self.user.houses_list[4]["sign_num"],
         ]
 
         # Make a list of points if they are retrograde or not.
@@ -122,7 +125,7 @@ class MakeSvgInstance:
         for planet in self.user.planets_list:
             self.points_retrograde.append(planet["retrograde"])
 
-        self.points_retrograde = self.points_retrograde + [False, False, False, False]
+        self.points_retrograde = self.points_retrograde + [False, False, False, False, False]
 
         # Makes the sign number list.
 
@@ -149,6 +152,7 @@ class MakeSvgInstance:
                 self.t_user.houses_degree_ut[9],
                 self.t_user.houses_degree_ut[6],
                 self.t_user.houses_degree_ut[3],
+                self.t_user.houses_degree_ut[4],
             ]
 
             # Make a list of the relative degrees of the points in the graphic.
@@ -162,6 +166,7 @@ class MakeSvgInstance:
                 self.t_user.houses_list[9]["position"],
                 self.t_user.houses_list[6]["position"],
                 self.t_user.houses_list[3]["position"],
+                self.t_user.houses_list[4]["position"],
             ]
 
             # Make list of the poits sign.
@@ -176,6 +181,7 @@ class MakeSvgInstance:
                 self.t_user.houses_list[9]["sign_num"],
                 self.t_user.houses_list[6]["sign_num"],
                 self.t_user.houses_list[3]["sign_num"],
+                self.t_user.houses_list[4]["sign_num"],
             ]
 
             # Make a list of poits if they are retrograde or not.
@@ -185,7 +191,7 @@ class MakeSvgInstance:
             for planet in self.t_user.planets_list:
                 self.t_points_retrograde.append(planet["retrograde"])
 
-            self.t_points_retrograde = self.t_points_retrograde + [False, False, False, False]
+            self.t_points_retrograde = self.t_points_retrograde + [False, False, False, False, False]
 
             self.t_houses_sign_graph = []
             for h in self.t_user.houses_list:
@@ -610,7 +616,7 @@ class MakeSvgInstance:
     def _make_planets(self, r):
         planets_degut = {}
         diff = range(len(self.planets_settings))
-
+        logger.debug(f"diff: {diff}")
         for i in range(len(self.planets_settings)):
             if self.planets_settings[i]["visible"] == 1:
                 # list of planets sorted by degree
@@ -1226,6 +1232,7 @@ class MakeSvgInstance:
                 out += f'<g transform="translate(60,-8)"><use transform="scale(0.3)" xlink:href="#{self.zodiac[self.points_sign[i]]["name"]}" /></g>'
 
                 # planet retrograde
+                logger.debug(f"Retrograde: {self.points_retrograde[i]}")
                 if self.points_retrograde[i]:
                     out += '<g transform="translate(74,-6)"><use transform="scale(.5)" xlink:href="#retrograde" /></g>'
 

@@ -37,6 +37,7 @@
         "Mc": "Mc",
         "Dsc": "Dsc",
         "Ic": "Ic",
+        "WTF": "WTF",
         "North_Node": "North Node",
         "Mean_Node": "Mean Node"
       }
@@ -190,6 +191,7 @@
     "planet_13": "#FF0000",
     "planet_14": "#0000FF",
     "planet_15": "#000000",
+    "planet_16": "#000000",
     "lunar_phase_0": "#000000",
     "lunar_phase_1": "#FFFFFF",
     "lunar_phase_2": "#CCCCCC"

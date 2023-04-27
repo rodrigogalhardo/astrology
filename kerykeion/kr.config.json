@@ -36,6 +36,7 @@
         "Mc": "Mc",
         "Dsc": "Dsc",
         "Ic": "Ic",
+        "Wtf": "Wtf",
         "North_Node": "North Node",
         "Mean_Node": "Mean Node"
       }
@@ -264,6 +265,7 @@
     "planet_13": "#FF0000",
     "planet_14": "#0000FF",
     "planet_15": "#000000",
+    "planet_16": "#000000",
     "lunar_phase_0": "#000000",
     "lunar_phase_1": "#FFFFFF",
     "lunar_phase_2": "#CCCCCC"
@@ -514,7 +516,7 @@
       "id": 14,
       "name": "Seventh_House",
       "color": "#0000FF",
-      "visible": 0,
+      "visible": 1,
       "element_points": 0,
       "zodiac_relation": "-1",
       "label": "Dsc",
@@ -524,11 +526,21 @@
       "id": 15,
       "name": "Fourth_House",
       "color": "#000000",
-      "visible": 0,
+      "visible": 1,
       "element_points": 0,
       "zodiac_relation": "-1",
       "label": "Ic",
       "label_short": "Ic"
+    },
+    {
+      "id": 16,
+      "name": "Fifth_House",
+      "color": "#000000",
+      "visible": 1,
+      "element_points": 0,
+      "zodiac_relation": "-1",
+      "label": "Wtf",
+      "label_short": "Wtf"
     }
   ],
   "axes_orbit": 1
